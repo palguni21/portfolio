@@ -159,229 +159,194 @@
                 </div>
             </div>
 
-            <!-- Row 3: 2017-2019 -->
-            <div class="timeline-row" data-aos="fade-up">
-                <div class="timeline-dot"></div>
+        </div>
+    </section>
 
-                <div class="timeline-half left">
-                </div>
+            <!-- PROJECTS -->
+            <section class="section-container" id="projects">
+                <h2 class="section-title" data-aos="fade-right">Featured Projects</h2>
 
-                <div class="timeline-half right">
-                    <div class="timeline-content">
-                        <span class="timeline-date">2017 – 2019</span>
-                        <h3>PUC</h3>
-                        <div class="timeline-hover">
-                            <i class="fas fa-university"></i> Vidya Mandir Pre University College &bull; 94%
+                <div class="projects-grid">
+
+                    <!-- CAN Project -->
+                    <div class="project-card clickable-card" data-aos="zoom-in" onclick="openModal('project', 'CAN')">
+                        <div class="project-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h3>CAN – Cognitive Assistance for Network</h3>
+                        <p>An AI‑based predictive analytics system to uncover patterns, generate actionable insights,
+                            and drive
+                            data‑driven decisions. Click to view details.</p>
+                        <div class="project-tech">
+                            <span class="tech-bubble">React</span>
+                            <span class="tech-bubble">Spring Boot</span>
+                            <span class="tech-bubble">MongoDB</span>
+                            <span class="tech-bubble">AI/ML</span>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <!-- Row 4: 2015-2017 -->
-            <div class="timeline-row" data-aos="fade-up">
-                <div class="timeline-dot"></div>
-
-                <div class="timeline-half left">
-                </div>
-
-                <div class="timeline-half right">
-                    <div class="timeline-content">
-                        <span class="timeline-date">2015 – 2017</span>
-                        <h3>SSLC</h3>
-                        <div class="timeline-hover">
-                            <i class="fas fa-school"></i> Vidya Vardaka Sangha Sardar Patel High School, Bangalore
-                            &bull; 95%
+                    <!-- Project 1 -->
+                    <div class="project-card clickable-card" data-aos="zoom-in" data-aos-delay="100"
+                        onclick="openModal('project', 'LeavePortal')">
+                        <div class="project-icon">
+                            <i class="fas fa-users-cog"></i>
+                        </div>
+                        <h3>Employee Leave Portal</h3>
+                        <p>A comprehensive full-stack system for managing employee leave requests, approvals, and
+                            tracking
+                            effectively. Click to view details.</p>
+                        <div class="project-tech">
+                            <span class="tech-bubble">React</span>
+                            <span class="tech-bubble">Spring Boot</span>
+                            <span class="tech-bubble">MongoDB</span>
                         </div>
                     </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card clickable-card" data-aos="zoom-in" data-aos-delay="200"
+                        onclick="openModal('project', 'PetServices')">
+                        <div class="project-icon">
+                            <i class="fas fa-paw"></i>
+                        </div>
+                        <h3>Pet Services Website</h3>
+                        <p>An intuitive booking platform designed with a smooth user experience for accessing premium
+                            pet
+                            services. Click to view details.</p>
+                        <div class="project-tech">
+                            <span class="tech-bubble">WordPress</span>
+                            <span class="tech-bubble">UI/UX</span>
+                            <span class="tech-bubble">Booking API</span>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- CONTACT -->
+            <section class="contact-section" id="contact" data-aos="fade-up">
+                <h2>Let's build something together</h2>
+                <p>Currently open for new opportunities. My inbox is always open.</p>
+
+                <div class="social-links">
+                    <a href="mailto:bmpalguni@gmail.com" class="social-link" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/palguni-b-m/" target="_blank" class="social-link"
+                        title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="./Palguni_BM_Resume.pdf" download="Palguni_BM_Resume.pdf" class="social-link"
+                        title="Download Resume">
+                        <i class="fas fa-file-download"></i>
+                    </a>
+                </div>
+
+                <a href="mailto:bmpalguni@gmail.com" class="btn btn-primary"
+                    style="margin-top: 40px; display: inline-block;">
+                    Say Hello
+                </a>
+            </section>
+
+            <footer>
+                <p>© 2026 Palguni B M. Designed and built</p>
+            </footer>
+
+            <!-- GLOBAL MODAL -->
+            <div id="dynamicModal" class="modal-overlay">
+                <div class="modal-content">
+                    <span class="close-btn" onclick="closeModal()">&times;</span>
+                    <h2 id="modalTitle">Title</h2>
+                    <div id="modalBody">Content goes here...</div>
                 </div>
             </div>
 
-        </div>
-    </section>
+            <!-- AOS SCRIPT -->
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <script>
+                AOS.init({
+                    duration: 800,
+                    once: true,
+                    offset: 100
+                });
 
-    <!-- PROJECTS -->
-    <section class="section-container" id="projects">
-        <h2 class="section-title" data-aos="fade-right">Featured Projects</h2>
+                // Modal Logic
+                const skillDescriptions = {
+                    'Java': 'Experienced in building scalable backend services and enterprise applications using Java core concepts, multithreading, and standard libraries.',
+                    'React': 'Proficient in developing reusable UI components using React, improving front‑end scalability, efficiency, and ensuring responsive design over multiple viewports.',
+                    'Spring Boot': 'Skilled in building and integrating RESTful APIs using Spring Boot for backend services, ensuring high performance and robust security.',
+                    'MongoDB': 'Hands-on experience in managing and storing both structured and unstructured data efficiently using MongoDB pipelines and document models.',
+                    'MySQL': 'Well-versed in relational database design, writing complex SQL queries, views, and ensuring data integrity across large tables.',
+                    'Docker': 'Experienced in containerizing full-stack applications to ensure consistency across development, testing, and production environments.',
+                    'Python': 'Proficient in Python for scripting, data preprocessing, and assisting in building and improving predictive analytics models.',
+                    'HTML': 'Expertise in writing semantic HTML5 to build the foundation of accessible and SEO-friendly web platforms.',
+                    'CSS': 'Strong knowledge of modern CSS3, Flexbox, Grid, and creating custom animations for premium user experiences.',
+                    'PowerBI': 'Capable of designing intuitive data visualizations and reports using PowerBI to improve insight accessibility and business intelligence.',
+                    'Tableau': 'Experienced in leveraging Tableau for creating interactive and dynamic dashboard visualizations to uncover trends in large datasets.',
+                    'Git': 'Strong understanding of version control, branching strategies, and collaborative development across cross-functional teams using Git.',
+                    'Advance Excel': 'Proficient in using advanced functions, pivot tables, macros, and VBA for robust data analysis and reporting.',
+                    'Data Modeling': 'Experienced in structuring complex datasets, creating conceptual, logical, and physical data models to support business processes.',
+                    'ETL': 'Skilled in extracting, transforming, and loading large volumes of data from multiple sources into centralized data warehouses.',
+                    'Data Cleaning and Transforming': 'Expertise in resolving data inconsistencies, handling missing values, and formatting raw data into structured formats suitable for analysis.',
+                    'Apache Spark': 'Hands-on experience in distributed large-scale data processing and executing fast analytical queries using Apache Spark clusters.',
+                    'Apache Hadoop': 'Familiar with big data processing frameworks, HDFS, and managing vast amounts of unstructured data within the Hadoop ecosystem.',
+                    'Pandas': 'Highly proficient in utilizing Python Pandas library for advanced data manipulation, aggregation, and time-series analysis.'
+                };
 
-        <div class="projects-grid">
-
-            <!-- CAN Project -->
-            <div class="project-card clickable-card" data-aos="zoom-in" onclick="openModal('project', 'CAN')">
-                <div class="project-icon">
-                    <i class="fas fa-network-wired"></i>
-                </div>
-                <h3>CAN – Cognitive Assistance for Network</h3>
-                <p>An AI‑based predictive analytics system to uncover patterns, generate actionable insights, and drive
-                    data‑driven decisions. Click to view details.</p>
-                <div class="project-tech">
-                    <span class="tech-bubble">React</span>
-                    <span class="tech-bubble">Spring Boot</span>
-                    <span class="tech-bubble">MongoDB</span>
-                    <span class="tech-bubble">AI/ML</span>
-                </div>
-            </div>
-
-            <!-- Project 1 -->
-            <div class="project-card clickable-card" data-aos="zoom-in" data-aos-delay="100"
-                onclick="openModal('project', 'LeavePortal')">
-                <div class="project-icon">
-                    <i class="fas fa-users-cog"></i>
-                </div>
-                <h3>Employee Leave Portal</h3>
-                <p>A comprehensive full-stack system for managing employee leave requests, approvals, and tracking
-                    effectively. Click to view details.</p>
-                <div class="project-tech">
-                    <span class="tech-bubble">React</span>
-                    <span class="tech-bubble">Spring Boot</span>
-                    <span class="tech-bubble">MongoDB</span>
-                </div>
-            </div>
-
-            <!-- Project 2 -->
-            <div class="project-card clickable-card" data-aos="zoom-in" data-aos-delay="200"
-                onclick="openModal('project', 'PetServices')">
-                <div class="project-icon">
-                    <i class="fas fa-paw"></i>
-                </div>
-                <h3>Pet Services Website</h3>
-                <p>An intuitive booking platform designed with a smooth user experience for accessing premium pet
-                    services. Click to view details.</p>
-                <div class="project-tech">
-                    <span class="tech-bubble">WordPress</span>
-                    <span class="tech-bubble">UI/UX</span>
-                    <span class="tech-bubble">Booking API</span>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="contact-section" id="contact" data-aos="fade-up">
-        <h2>Let's build something together</h2>
-        <p>Currently open for new opportunities. My inbox is always open.</p>
-
-        <div class="social-links">
-            <a href="mailto:bmpalguni@gmail.com" class="social-link" title="Email">
-                <i class="fas fa-envelope"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/palguni-b-m/" target="_blank" class="social-link" title="LinkedIn">
-                <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="./Palguni_BM_Resume.pdf" download="Palguni_BM_Resume.pdf" class="social-link"
-                title="Download Resume">
-                <i class="fas fa-file-download"></i>
-            </a>
-        </div>
-
-        <a href="mailto:bmpalguni@gmail.com" class="btn btn-primary" style="margin-top: 40px; display: inline-block;">
-            Say Hello
-        </a>
-    </section>
-
-    <footer>
-        <p>© 2026 Palguni B M. Designed and built</p>
-    </footer>
-
-    <!-- GLOBAL MODAL -->
-    <div id="dynamicModal" class="modal-overlay">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModal()">&times;</span>
-            <h2 id="modalTitle">Title</h2>
-            <div id="modalBody">Content goes here...</div>
-        </div>
-    </div>
-
-    <!-- AOS SCRIPT -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 800,
-            once: true,
-            offset: 100
-        });
-
-        // Modal Logic
-        const skillDescriptions = {
-            'Java': 'Experienced in building scalable backend services and enterprise applications using Java core concepts, multithreading, and standard libraries.',
-            'React': 'Proficient in developing reusable UI components using React, improving front‑end scalability, efficiency, and ensuring responsive design over multiple viewports.',
-            'Spring Boot': 'Skilled in building and integrating RESTful APIs using Spring Boot for backend services, ensuring high performance and robust security.',
-            'MongoDB': 'Hands-on experience in managing and storing both structured and unstructured data efficiently using MongoDB pipelines and document models.',
-            'MySQL': 'Well-versed in relational database design, writing complex SQL queries, views, and ensuring data integrity across large tables.',
-            'Docker': 'Experienced in containerizing full-stack applications to ensure consistency across development, testing, and production environments.',
-            'Python': 'Proficient in Python for scripting, data preprocessing, and assisting in building and improving predictive analytics models.',
-            'HTML': 'Expertise in writing semantic HTML5 to build the foundation of accessible and SEO-friendly web platforms.',
-            'CSS': 'Strong knowledge of modern CSS3, Flexbox, Grid, and creating custom animations for premium user experiences.',
-            'PowerBI': 'Capable of designing intuitive data visualizations and reports using PowerBI to improve insight accessibility and business intelligence.',
-            'Tableau': 'Experienced in leveraging Tableau for creating interactive and dynamic dashboard visualizations to uncover trends in large datasets.',
-            'Git': 'Strong understanding of version control, branching strategies, and collaborative development across cross-functional teams using Git.',
-            'Advance Excel': 'Proficient in using advanced functions, pivot tables, macros, and VBA for robust data analysis and reporting.',
-            'Data Modeling': 'Experienced in structuring complex datasets, creating conceptual, logical, and physical data models to support business processes.',
-            'ETL': 'Skilled in extracting, transforming, and loading large volumes of data from multiple sources into centralized data warehouses.',
-            'Data Cleaning and Transforming': 'Expertise in resolving data inconsistencies, handling missing values, and formatting raw data into structured formats suitable for analysis.',
-            'Apache Spark': 'Hands-on experience in distributed large-scale data processing and executing fast analytical queries using Apache Spark clusters.',
-            'Apache Hadoop': 'Familiar with big data processing frameworks, HDFS, and managing vast amounts of unstructured data within the Hadoop ecosystem.',
-            'Pandas': 'Highly proficient in utilizing Python Pandas library for advanced data manipulation, aggregation, and time-series analysis.'
-        };
-
-        const projectDescriptions = {
-            'CAN': `<p><strong>CAN – Cognitive Assistance for Network</strong></p>
-                    <p>Developed and contributed to an AI‑based predictive analytics system designed to analyze large datasets, uncover patterns and trends, and generate actionable insights for data‑driven decision‑making. Collaborated with cross‑functional teams to enhance performance, model accuracy, and visualization clarity.</p>
-                    <ul style="text-align: left; margin-left: 20px; margin-top: 15px; color: var(--text-muted); line-height: 1.8;">
-                        <li>Performed data preprocessing and cleaning to ensure high data quality and reliability.</li>
-                        <li>Assisted in building and improving predictive models for anomaly detection and performance forecasting.</li>
-                        <li>Enhanced overall system performance through iterative development and optimization.</li>
-                        <li>Designed intuitive data visualizations and reports to improve insight accessibility.</li>
-                        <li>Developed reusable UI components using React, improving front‑end scalability and efficiency.</li>
-                        <li>Built and integrated RESTful APIs using Spring Boot for backend services.</li>
-                        <li>Managed and stored structured/unstructured data efficiently using MongoDB.</li>
-                    </ul>`,
-            'LeavePortal': `<p><strong>Employee Leave Portal</strong></p>
-                            <p>A comprehensive full-stack system for managing employee leave requests, approvals, and tracking effectively.</p>
+                const projectDescriptions = {
+                    'CAN': `<p><strong>CAN – Cognitive Assistance for Network</strong></p>
+                            <p>An AI-based predictive analytics system designed to analyze large datasets, uncover patterns, and generate actionable insights for data-driven decision-making.</p>
                             <ul style="text-align: left; margin-left: 20px; margin-top: 15px; color: var(--text-muted); line-height: 1.8;">
-                                <li>Implemented secure user authentication allowing employees and managers to log in using their credentials.</li>
-                                <li>Developed a self-service dashboard for employees to apply for and withdraw leave requests.</li>
-                                <li>Built a management portal for supervisors to approve or deny pending leave applications.</li>
-                                <li>Designed a robust database schema using MongoDB to securely store and document all leave details including dates, reasons, and status.</li>
+                                <li>Performed data preprocessing and cleaning to ensure high data quality and reliability across pipelines.</li>
+                                <li>Assisted in building intelligent predictive models for anomaly detection and performance forecasting.</li>
+                                <li>Developed reusable UI components and built robust RESTful APIs using React and Spring Boot.</li>
+                                <li>Designed a robust database schema using MongoDB to securely manage both structured and unstructured data.</li>
                             </ul>`,
-            'PetServices': `<p><strong>Pet Services Website</strong></p>
-                            <p>An intuitive booking platform designed with a smooth user experience for accessing premium pet services.</p>
+                    'LeavePortal': `<p><strong>Employee Leave Portal</strong></p>
+                            <p>A comprehensive full-stack system optimized for managing employee leave requests, handling approvals, and seamlessly tracking employee availability.</p>
                             <ul style="text-align: left; margin-left: 20px; margin-top: 15px; color: var(--text-muted); line-height: 1.8;">
-                                <li>Designed a welcoming landing page showcasing the boarding facilities, amenities, and high-quality pictures of the premises.</li>
-                                <li>Implemented a comprehensive booking system allowing users to schedule appointments for various services including boarding, grooming, activities, and cafe tables.</li>
-                                <li>Developed an admin approval workflow where owners can review requests and send automated confirmations to users.</li>
-                                <li>Integrated a dedicated contact page and a direct mechanism to submit reviews to Google to improve customer engagement.</li>
+                                <li>Implemented secure user authentication allowing employees and managers to log in securely using credentials.</li>
+                                <li>Developed a self-service dashboard for employees to efficiently apply for and withdraw leave requests.</li>
+                                <li>Built a dedicated management portal for supervisors to swiftly approve or deny pending leave applications.</li>
+                                <li>Designed a robust database schema using MongoDB to securely store and document all user leave details.</li>
+                            </ul>`,
+                    'PetServices': `<p><strong>Pet Services Website</strong></p>
+                            <p>An intuitive online booking platform meticulously designed with a smooth user experience for accessing and reserving premium pet services.</p>
+                            <ul style="text-align: left; margin-left: 20px; margin-top: 15px; color: var(--text-muted); line-height: 1.8;">
+                                <li>Designed a welcoming landing page showcasing the boarding facilities, amenities, and high-quality pictures.</li>
+                                <li>Implemented a comprehensive booking system allowing users to easily schedule appointments for diverse services.</li>
+                                <li>Developed an admin approval workflow where business owners can review requests and send automated confirmations.</li>
+                                <li>Integrated a dedicated contact page and a direct mechanism to submit reviews to Google to drive user engagement.</li>
                             </ul>`
-        };
+                };
 
-        const modal = document.getElementById('dynamicModal');
-        const modalTitle = document.getElementById('modalTitle');
-        const modalBody = document.getElementById('modalBody');
+                const modal = document.getElementById('dynamicModal');
+                const modalTitle = document.getElementById('modalTitle');
+                const modalBody = document.getElementById('modalBody');
 
-        function openModal(type, key) {
-            if (type === 'skill') {
-                modalTitle.innerText = key + ' Experience';
-                modalBody.innerHTML = '<p>' + skillDescriptions[key] + '</p>';
-            } else if (type === 'project') {
-                modalTitle.innerText = 'Project Details';
-                modalBody.innerHTML = projectDescriptions[key];
-            }
-            modal.classList.add('active');
-            document.body.style.overflow = 'hidden'; // prevent background scrolling
-        }
+                function openModal(type, key) {
+                    if (type === 'skill') {
+                        modalTitle.innerText = key + ' Experience';
+                        modalBody.innerHTML = '<p>' + skillDescriptions[key] + '</p>';
+                    } else if (type === 'project') {
+                        modalTitle.innerText = 'Project Details';
+                        modalBody.innerHTML = projectDescriptions[key];
+                    }
+                    modal.classList.add('active');
+                    document.body.style.overflow = 'hidden'; // prevent background scrolling
+                }
 
-        function closeModal() {
-            modal.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
+                function closeModal() {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
 
-        // Close when clicking outside of the modal content
-        modal.addEventListener('click', function (event) {
-            if (event.target === modal) {
-                closeModal();
-            }
-        });
-    </script>
+                // Close when clicking outside of the modal content
+                modal.addEventListener('click', function (event) {
+                    if (event.target === modal) {
+                        closeModal();
+                    }
+                });
+            </script>
 
 </body>
 

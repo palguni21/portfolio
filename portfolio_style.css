@@ -808,27 +808,8 @@ footer p {
 }
 
 #modalBody {
-    max-height: 50vh;
-    overflow-y: auto;
-    padding-right: 15px;
-}
-
-#modalBody::-webkit-scrollbar {
-    width: 6px;
-}
-
-#modalBody::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.05); 
-    border-radius: 10px;
-}
-
-#modalBody::-webkit-scrollbar-thumb {
-    background: rgba(168, 85, 247, 0.6); 
-    border-radius: 10px;
-}
-
-#modalBody::-webkit-scrollbar-thumb:hover {
-    background: var(--accent); 
+    padding-right: 5px;
+    /* max-height and overflow-y removed to prevent scroll, modal behaves uniformly based on fixed content size */
 }
 
 /* RESPONSIVE */
